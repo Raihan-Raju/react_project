@@ -31,7 +31,7 @@ const AddVolunteer = () => {
         })
             .then((res) => {
                 console.log(res.data)
-                setfname('')
+                setfname ('')
                 setlname('')
                 setemail('')
                 setphone('')
@@ -72,7 +72,7 @@ const AddVolunteer = () => {
                                                 <input
                                                     type="text"
                                                     className="form-control"
-                                                    onChange={(e) => setName(e.target.value)}
+                                                    onChange={(e) => setfname(e.target.value)}
                                                     value={fname}
                                                     name="firstName"
                                                     placeholder="First name*"
@@ -82,7 +82,7 @@ const AddVolunteer = () => {
                                                 <input
                                                     type="text"
                                                     className="form-control"
-                                                    onChange={(e) => setName(e.target.value)}
+                                                    onChange={(e) => setlname(e.target.value)}
                                                     value={lname}
                                                     name="lastName"
                                                     placeholder="Last name*"
@@ -94,7 +94,7 @@ const AddVolunteer = () => {
                                                 <input
                                                     type="text"
                                                     className="form-control"
-                                                    onChange={(e) => setName(e.target.value)}
+                                                    onChange={(e) => setemail(e.target.value)}
                                                     value={email}
                                                     name="email"
                                                     placeholder="Email*"
@@ -104,7 +104,7 @@ const AddVolunteer = () => {
                                                 <input
                                                     type="text"
                                                     className="form-control"
-                                                    onChange={(e) => setName(e.target.value)}
+                                                    onChange={(e) =>setphone(e.target.value)}
                                                     value={phone}
                                                     name="phone"
                                                     placeholder="Phone"
@@ -116,7 +116,7 @@ const AddVolunteer = () => {
                                                 <input
                                                     type="text"
                                                     className="form-control"
-                                                    onChange={(e) => setName(e.target.value)}
+                                                    onChange={(e) => setaddress(e.target.value)}
                                                     value={address}
                                                     name="address"
                                                     placeholder="Address"
@@ -129,7 +129,7 @@ const AddVolunteer = () => {
                                                     cols={30}
                                                     rows={4}
                                                     className="form-control"
-                                                    onChange={(e) => setName(e.target.value)}
+                                                    onChange={(e) =>  setnote(e.target.value)}
                                                     value={note}
                                                     name="note"
                                                     placeholder="Additional note"
