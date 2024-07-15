@@ -17,7 +17,7 @@ const EditUser = () => {
     useEffect(() => {
         axios
             .get(
-                `http://localhost/react-sadaka/php/user/edit_user.php?id=${id}`
+                `http://localhost/react_project/sadaka_php_api/php/user/edit_user.php?id=${id}`
             )
             .then((res) => {
                 setUsername(res.data.username);
@@ -40,7 +40,7 @@ const EditUser = () => {
 
         axios
             .post(
-                "http://localhost/react-sadaka/php/user/update_users.php",
+                "http://localhost/react_project/sadaka_php_api/php/user/update_users.php",
                 formdata,
                 {
                     headers: {

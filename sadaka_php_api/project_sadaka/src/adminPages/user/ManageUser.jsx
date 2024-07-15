@@ -10,15 +10,15 @@ const ManageUser = () => {
     const [items, setItems] = useState([]);
 
     const itemDelete = (id) => {
-        axios.post("http://localhost/react-sadaka/php/user/delete_user.php?id=" + id)
+        axios.post("http://localhost/react_project/sadaka_php_api/php/user/delete_user.php?id=" + id)
             .then((res) => (console.log(res)))
 
-        axios.get("http://localhost/react-sadaka/php/user/list_user.php")
+        axios.get("http://localhost/react_project/sadaka_php_api/php/user/list_user.php")
             .then((res) => setItems(res.data))
     }
 
     useEffect(() => {
-        axios.get("http://localhost/react-sadaka/php/user/list_user.php")
+        axios.get("http://localhost/react_project/sadaka_php_api/php/user/list_user.php")
             .then((res) => setItems(res.data))
     }, [])
     return (
@@ -69,7 +69,7 @@ const ManageUser = () => {
                                                                 <td>{data.phone}</td>
                                                                 <td>{data.address}</td>
                                                                 <td>
-                                                                    <img className='w-50' height={100} src={`http://localhost/react-sadaka/php/images/${data.photo}`} />
+                                                                    <img className='w-50' height={100} src={`http://localhost/react_project/sadaka_php_api/php/images/${data.photo}`} />
                                                                 </td>
                                                                 <td>
                                                                     <NavLink to={`/editUser/${data.id}`}>

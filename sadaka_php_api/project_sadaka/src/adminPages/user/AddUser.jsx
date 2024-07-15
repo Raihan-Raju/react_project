@@ -22,7 +22,7 @@ const AddUser = () => {
         formdata.append('phone', phone)
         formdata.append('address', address)
         formdata.append('photo', photo)
-        axios.post("http://localhost/react-sadaka/php/user/add_user.php", formdata, {
+        axios.post("http://localhost/react_project/sadaka_php_api/php/user/add_user.php", formdata, {
             headers: {
                 "Content-Type": "multipart/form-data"
             }

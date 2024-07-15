@@ -20,7 +20,7 @@ const EditDonation = () => {
     useEffect(() => {
         axios
             .get(
-                `http://localhost/react-sadaka/php/donnetions/edit_donnetion.php?id=${id}`
+                `http://localhost/react_project/sadaka_php_api/php/donnetions/edit_donnetion.php?id=${id}`
             )
             .then((res) => {
                 setLastName(res.data.lastName);
@@ -45,7 +45,7 @@ const EditDonation = () => {
 
         axios
             .post(
-                "http://localhost/react-sadaka/php/donnetions/update_donations.php",
+                "http://localhost/react_project/sadaka_php_api/php/donnetions/update_donations.php",
                 formdata,
                 {
                     headers: {

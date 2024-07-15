@@ -9,15 +9,15 @@ const ManageDonnetion = () => {
   const [items, setItems] = useState([]);
 
   const itemDelete = (id) => {
-    axios.post("http://localhost/react-sadaka/php/donnetions/delete_donnetion.php?id=" + id)
+    axios.post("http://localhost/react_project/sadaka_php_api/php/donnetions/delete_donnetion.php?id=" + id)
       .then((res) => (console.log(res)))
 
-    axios.get("http://localhost/react-sadaka/php/donnetions/list_donnetion.php")
+    axios.get("http://localhost/react_project/sadaka_php_api/php/donnetions/list_donnetion.php")
       .then((res) => setItems(res.data))
   }
 
   useEffect(() => {
-    axios.get("http://localhost/react-sadaka/php/donnetions/list_donnetion.php")
+    axios.get("http://localhost/react_project/sadaka_php_api/php/donnetions/list_donnetion.php")
       .then((res) => setItems(res.data))
   }, [])
   return (

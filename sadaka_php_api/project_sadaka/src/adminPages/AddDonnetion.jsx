@@ -24,7 +24,7 @@ const AddDonation = () => {
         formdata.append('address', address)
         formdata.append('amount', amount)
         formdata.append('note', note)
-        axios.post("http://localhost/react-sadaka/php/donnetions/add_donnetion.php", formdata, {
+        axios.post("http://localhost/react_project/sadaka_php_api/php/donnetions/add_donnetion.php", formdata, {
             headers: {
                 "Content-Type": "multipart/form-data"
             }
